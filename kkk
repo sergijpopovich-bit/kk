@@ -1,0 +1,20 @@
+(function(){
+    console.log('Плагін тест завантажився!');
+
+    if (Lampa && Lampa.Notice) {
+        Lampa.Notice.show('Тестовий плагін працює!');
+    } else {
+        alert('Lampa.Notice недоступний - версія Lampa не підтримує');
+    }
+
+    // Показуємо просте повідомлення в інтерфейсі
+    var item = {
+        title: 'Тест Київстар',
+        subtitle: 'Якщо бачиш це — завантаження JS працює. Тепер можна додавати логін.',
+        img: 'https://via.placeholder.com/300x450/00ff00/000000?text=OK'
+    };
+
+    if (Lampa && Lampa.Activity && Lampa.Activity.main) {
+        Lampa.Activity.main().append([item]);
+    }
+})();
